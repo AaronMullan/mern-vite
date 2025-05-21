@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Navbar(): React.ReactElement {
   return (
     <div>
-      <nav className="flex justify-between items-center mb-6">
+      <nav className="flex justify-between items-center gap-4 mb-6">
         <NavLink to="/">
           <img
             alt="MongoDB logo"

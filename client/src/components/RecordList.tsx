@@ -14,7 +14,7 @@ interface RecordProps {
 }
 
 const Record = ({ record, deleteRecord }: RecordProps) => (
-  <tr className="border-b transition-colors hover:bg-muted/50 bg-green-500">
+  <tr className="border-b transition-colors hover:bg-muted/50 bg-muted">
     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
       {record.name}
     </td>
@@ -84,13 +84,13 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <>
+    <div className="w-full p-6 flex flex-col items-center justify-center">
       <h3 className="text-lg font-semibold p-4">Employee Records</h3>
-      <div className="border rounded-lg overflow-hidden">
+      <div className="border rounded-lg overflow-hidden w-full">
         <div className="relative w-full overflow-auto">
           <table className="w-full caption-bottom text-sm">
             <thead className="[&_tr]:border-b">
-              <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+              <tr className="border-b transition-colors bg:black text-white">
                 <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0">
                   Name
                 </th>
@@ -109,6 +109,6 @@ export default function RecordList() {
           </table>
         </div>
       </div>
-    </>
+    </div>
   );
 }
