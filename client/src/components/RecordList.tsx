@@ -14,7 +14,7 @@ interface RecordProps {
 }
 
 const Record = ({ record, deleteRecord }: RecordProps) => (
-  <tr className="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+  <tr className="border-b transition-colors hover:bg-muted/50 bg-green-500">
     <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
       {record.name}
     </td>
@@ -77,11 +77,7 @@ export default function RecordList() {
   function recordList() {
     return records.map((record) => {
       return (
-        <Record
-          record={record}
-          deleteRecord={deleteRecord}
-          key={record._id}
-        />
+        <Record record={record} deleteRecord={deleteRecord} key={record._id} />
       );
     });
   }
